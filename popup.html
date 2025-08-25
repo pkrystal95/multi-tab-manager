@@ -2,39 +2,85 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <title>Tabify</title>
+    <title>Tabify - 탭 관리자</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="container">
-      <h2>Tabify</h2>
+      <header class="app-header">
+        <h1>Tabify</h1>
+        <p class="app-subtitle">효율적인 탭 관리</p>
+      </header>
+
+      <!-- 빠른 액션 -->
+      <div class="quick-actions">
+        <button id="save-session" class="primary-btn">
+          <span class="btn-icon">💾</span>
+          현재 세션 저장
+        </button>
+        <button id="restore-session" class="secondary-btn">
+          <span class="btn-icon">🔄</span>
+          세션 복원
+        </button>
+        <button id="close-duplicates" class="secondary-btn">
+          <span class="btn-icon">🧹</span>
+          중복 정리
+        </button>
+      </div>
 
       <!-- 세션 관리 -->
       <div class="card">
-        <h3>세션 관리</h3>
-        <div class="button-row">
-          <button id="save-session">저장</button>
-          <button id="restore-session">복원</button>
-          <button id="close-duplicates">중복 닫기</button>
+        <div class="card-header">
+          <h3>📚 저장된 세션</h3>
+          <span id="session-count" class="count-badge">0</span>
         </div>
-        <ul id="session-list" class="scroll-list"></ul>
+        <div id="session-list" class="scroll-list"></div>
       </div>
 
       <!-- 규칙 관리 -->
       <div class="card">
-        <h3>카테고리 규칙</h3>
-        <ul id="rules-list" class="scroll-list"></ul>
+        <div class="card-header">
+          <h3>🏷️ 카테고리 규칙</h3>
+          <span id="rules-count" class="count-badge">0</span>
+        </div>
+        <div id="rules-list" class="scroll-list"></div>
         <div class="rule-inputs">
           <input id="rule-name" placeholder="카테고리 이름" />
           <input id="rule-pattern" placeholder="정규식 예: youtube|netflix" />
-          <button id="add-rule">추가</button>
+          <button id="add-rule" class="add-btn">
+            <span class="btn-icon">➕</span>
+            추가
+          </button>
         </div>
       </div>
 
-      <!-- 그룹별 탭 -->
+      <!-- 탭 그룹 -->
       <div class="card">
-        <h3>탭 그룹</h3>
-        <div id="tab-groups" class="scroll-list"></div>
+        <div class="card-header">
+          <h3>📑 탭 그룹</h3>
+          <div class="header-actions">
+            <button
+              id="show-hidden-tabs"
+              class="small-btn"
+              title="숨겨진 탭 표시"
+            >
+              <span class="btn-icon">👁️</span>
+            </button>
+            <button
+              id="refresh-tabs"
+              class="small-btn"
+              title="탭 목록 새로고침"
+            >
+              <span class="btn-icon">🔄</span>
+            </button>
+          </div>
+        </div>
+        <div id="tab-groups"></div>
+      </div>
+
+      <!-- 상태 표시 -->
+      <div id="status-bar" class="status-bar">
+        <span id="status-text">준비됨</span>
       </div>
     </div>
 
