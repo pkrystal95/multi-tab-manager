@@ -1,0 +1,214 @@
+body {
+  background: linear-gradient(135deg, #f7f7fa 0%, #e3e8f0 100%);
+  font-family: "Segoe UI", "Apple SD Gothic Neo", "Malgun Gothic", Arial,
+    sans-serif;
+  color: #2d3a4a;
+  font-size: 15px;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 420px;
+  margin: 28px auto;
+  padding: 24px 20px 20px 20px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(60, 80, 120, 0.1);
+  border: 1px solid #e5e9f2;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 22px;
+  color: #2d3a4a;
+  letter-spacing: 1.2px;
+  font-size: 1.45em;
+  font-weight: 700;
+}
+
+/* 카드 */
+.card {
+  background: #f6f8fc;
+  border-radius: 12px;
+  padding: 18px 16px 14px 16px;
+  margin-bottom: 22px;
+  box-shadow: 0 2px 8px rgba(60, 80, 120, 0.06);
+  border: 1px solid #e3e8f0;
+  transition: box-shadow 0.18s;
+}
+.card:hover {
+  box-shadow: 0 4px 16px rgba(60, 80, 120, 0.13);
+}
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 1.13em;
+  color: #3a4a5a;
+  letter-spacing: 0.7px;
+  font-weight: 600;
+}
+
+/* 버튼 행 */
+.button-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+.button-row button {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 7px 0;
+  border-radius: 6px;
+  background: #4f8cff;
+  color: #fff;
+  border: none;
+  font-weight: 500;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.15s, box-shadow 0.15s;
+  box-shadow: 0 1px 3px rgba(79, 140, 255, 0.08);
+}
+.button-row button:hover {
+  background: #2563eb;
+  box-shadow: 0 2px 8px rgba(79, 140, 255, 0.13);
+}
+
+/* 스크롤 리스트 */
+.scroll-list {
+  max-height: 500px;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  scrollbar-width: thin;
+  scrollbar-color: #b3c6f7 #f6f8fc;
+}
+.scroll-list::-webkit-scrollbar {
+  width: 7px;
+  background: #f6f8fc;
+}
+.scroll-list::-webkit-scrollbar-thumb {
+  background: #b3c6f7;
+  border-radius: 6px;
+}
+#session-list li,
+#rules-list li {
+  padding: 7px 10px;
+  border-radius: 7px;
+  margin-bottom: 5px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 1px 3px rgba(60, 80, 120, 0.04);
+  border: 1px solid #e3e8f0;
+  transition: background 0.13s, box-shadow 0.13s;
+}
+#session-list li:hover,
+#rules-list li:hover {
+  background: #f0f4ff;
+  box-shadow: 0 2px 8px rgba(79, 140, 255, 0.08);
+}
+
+/* 규칙 입력 */
+.rule-inputs {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+.rule-inputs input {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 7px 9px;
+  border-radius: 6px;
+  border: 1px solid #b3c6f7;
+  font-size: 1em;
+  background: #fafdff;
+  transition: border 0.15s, box-shadow 0.15s;
+}
+.rule-inputs input:focus {
+  border: 1.5px solid #4f8cff;
+  outline: none;
+  box-shadow: 0 0 0 2px #e3e8f0;
+}
+.rule-inputs button {
+  padding: 7px 14px;
+  border-radius: 6px;
+  background: #4f8cff;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.15s, box-shadow 0.15s;
+  box-shadow: 0 1px 3px rgba(79, 140, 255, 0.08);
+}
+.rule-inputs button:hover {
+  background: #2563eb;
+  box-shadow: 0 2px 8px rgba(79, 140, 255, 0.13);
+}
+
+/* 탭 그룹 */
+#tab-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-top: 6px;
+}
+.tab-group {
+  background: linear-gradient(90deg, #e7eaf3 80%, #dbeafe 100%);
+  border-radius: 9px;
+  padding: 10px 12px;
+  border: 1px solid #c7d2fe;
+  box-shadow: 0 1px 4px rgba(60, 80, 120, 0.06);
+  transition: box-shadow 0.13s;
+}
+.tab-group:hover {
+  box-shadow: 0 2px 12px rgba(79, 140, 255, 0.1);
+}
+.tab-group-title {
+  font-weight: 700;
+  font-size: 1.05em;
+  margin-bottom: 5px;
+  color: #2d3a4a;
+  letter-spacing: 0.5px;
+}
+.tab-item {
+  padding: 5px 0 5px 14px;
+  font-size: 1em;
+  color: #3a4a5a;
+  border-left: 3.5px solid #4f8cff;
+  margin-bottom: 3px;
+  background: #fff;
+  border-radius: 5px;
+  transition: background 0.13s, border-color 0.13s;
+  cursor: pointer;
+}
+.tab-item:hover {
+  background: #e0e7ff;
+  border-left-color: #2563eb;
+}
+
+/* 탭 그룹 버튼 */
+.tab-group-btn {
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(135deg, #4f8cff 0%, #2563eb 100%);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 3px 8px rgba(79, 140, 255, 0.2);
+  transition: transform 0.1s, box-shadow 0.2s, background 0.2s;
+}
+.tab-group-btn:hover {
+  background: linear-gradient(135deg, #3578e0 0%, #1e50c4 100%);
+  box-shadow: 0 5px 12px rgba(79, 140, 255, 0.3);
+  transform: translateY(-1px);
+}
+.tab-group-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(79, 140, 255, 0.2);
+}

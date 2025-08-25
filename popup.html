@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tabify</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Tabify</h2>
+
+      <!-- 세션 관리 -->
+      <div class="card">
+        <h3>세션 관리</h3>
+        <div class="button-row">
+          <button id="save-session">저장</button>
+          <button id="restore-session">복원</button>
+          <button id="close-duplicates">중복 닫기</button>
+        </div>
+        <ul id="session-list" class="scroll-list"></ul>
+      </div>
+
+      <!-- 규칙 관리 -->
+      <div class="card">
+        <h3>카테고리 규칙</h3>
+        <ul id="rules-list" class="scroll-list"></ul>
+        <div class="rule-inputs">
+          <input id="rule-name" placeholder="카테고리 이름" />
+          <input id="rule-pattern" placeholder="정규식 예: youtube|netflix" />
+          <button id="add-rule">추가</button>
+        </div>
+      </div>
+
+      <!-- 그룹별 탭 -->
+      <div class="card">
+        <h3>탭 그룹</h3>
+        <div id="tab-groups" class="scroll-list"></div>
+      </div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

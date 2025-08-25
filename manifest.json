@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Tabify",
+  "version": "1.0",
+  "description": "도메인/정규식 기반 탭 그룹화, 세션 저장/복원, 중복 정리",
+  "permissions": ["tabs", "storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Tab Manager"
+  }
+}
