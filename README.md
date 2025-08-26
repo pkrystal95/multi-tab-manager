@@ -4,6 +4,11 @@
 
 **Tabify**는 넘쳐나는 브라우저 탭을 효율적으로 관리하고 정리할 수 있도록 도와주는 Chrome 확장 프로그램입니다. 세션 저장, 중복 탭 정리, 자동 그룹화 등 강력한 기능으로 웹 서핑 환경을 쾌적하게 만드세요.
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/18968913-c95a-4828-9def-661fe7432c2f" height="491" />
+  <img src="https://github.com/user-attachments/assets/98be192b-0bc8-4441-b2d2-17b8b69dc50e" height="491" />
+</p>
+
 ---
 
 ## ✨ 주요 기능
